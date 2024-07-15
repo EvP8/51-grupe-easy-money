@@ -1,14 +1,54 @@
 body {
     margin: 0;
     background-color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-header,
-main > section:nth-child(1),
-main > section:nth-child(2) {
+.container {
     display: inline-block;
     width: 800px;
     margin-left: calc(50% - 400px);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.logo {
+    height: 30px;
+}
+
+.active { 
+    background-color: red;
+}
+
+header > nav {
+    display: flex;
+    gap: 30px;
+}
+
+header > nav > a {
+    font-size: 20px;
+    text-decoration: none;
+    color: grey;
+}
+
+
+
+header > a {
+    padding: 0.3em 1em;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    /* jeigu, nera font-size ant elemento, default font-size = 16px = 1em */
+    /* jeigu, yra font-size ant elemento, default font-size = 20px = 1em */
+    text-decoration: none;
+    border-radius: 0.5em;
+    
 }
 
 main {
@@ -27,4 +67,10 @@ div {
 section > img {
     float: right;
     width: 55%;
+}
+
+.main-title {
+    font-size: 100px;
+    font-weight: bold;
+    color: red;
 }
