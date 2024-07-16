@@ -1,7 +1,8 @@
 body {
     margin: 0;
     background-color: aquamarine;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
 }
 
 .container {
@@ -9,68 +10,65 @@ body {
     width: 800px;
     margin-left: calc(50% - 400px);
 }
-
-header {
+header.container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 60px;
 }
-
 .logo {
     height: 30px;
 }
-
-.active { 
-    background-color: red;
-}
-
-header > nav {
+.main-nav {
     display: flex;
     gap: 30px;
 }
-
-header > nav > a {
+.link {
     font-size: 20px;
+    line-height: 1em;
     text-decoration: none;
     color: grey;
 }
-
-
-
-header > a {
+.link:hover {
+    color: black;
+    text-decoration: underline;
+}
+.link.active {
+    color: black;
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
     padding: 0.3em 1em;
-    background-color: black;
+    background-color: rgb(202, 63, 63);
     color: white;
-    font-size: 20px;
-    /* jeigu, nera font-size ant elemento, default font-size = 16px = 1em */
-    /* jeigu, yra font-size ant elemento, default font-size = 20px = 1em */
+    font-size: 16px;
+    line-height: 2em;
     text-decoration: none;
     border-radius: 0.5em;
-    
+    border: 0.1em solid transparent;
+}
+.btn:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
 }
 
-main {
+.main {
     margin-top: 60px;
 }
 
-main > section + section {
+.main > .container + .container {
     margin-top: 60px;
 }
 
-div {
+.texts {
     float: left;
     width: 35%;
 }
 
-section > img {
+.hero-img {
     float: right;
     width: 55%;
-}
-
-.main-title {
-    font-size: 100px;
-    font-weight: bold;
-    color: red;
 }
